@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap')
+@import "animation"
+
+
+$Green: #4cb600
+
+$PepDark: #51515d
+$PepLight: #707079
+
+
+i
+  color: $PepDark
+
+body
+  margin: 0
+  padding: 0
+  color: #222
+  font-family: 'Roboto Condensed', sans-serif
+
+.cont
+  max-width: 1400px
+  height: 100%
+  margin: 0 auto
+  padding: 0 15px
+
+a
+  text-decoration: none
+  color: #222
+
+.btn
+  font-size: 18px
+  text-align: center
+  background: $Green
+  color: #414141
+  padding: 15px 20px
+  border-radius: 4px
+  margin: 8px 0
+  transition: .15s linear
+  &:hover
+    background: #5cdd00
+
+////////////////////////////////////////////
+  ////////////    HEADER   //////////////
+////////////////////////////////////////////
+
+.headerWP
+  display: flex
+  justify-content: space-between
+  margin: 0 50px
+
+  .headerWP__logo
+    display: flex
+    font-size: 46px
+    background: $PepDark
+    padding: 0 10px
+    .logo
+      margin-top: auto
+      margin-bottom: 30px
+      color: #fff
+
+
+  .contacts-header
+    display: flex
+    flex-direction: column
+    justify-content: center
+    font-size: 22px
+    margin: 10px 0
+
+    &__btn
+      color: #fff
+        
+    &__tel1,
+    &__tel2
+      marin: 8px 0
+      padding-left: 15px
+      
+      i
+        margin-right: 15px
+
+  .header-adr
+    font-size: 18px
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-content: center
+    justify-content: center
+    
+    &__btn
+      background: $Green
+      color: #fff
+      padding: 5px 10px
+      border-radius: 4px
+      transition: .15s linear
+      text-align: center
+      &:hover
+        background: #5cdd00
+
+    &__adr
+      display: block
+      i
+        margin-right: 5px
+
+////////////////////////////////////////////
+  ////////////    NAVIGATON   ////////////
+////////////////////////////////////////////
+nav
+  background: $PepDark
+  border-top: 5px solid #707079
+  margin-top: 20px
+  padding: 0 20px
+
+.navWP
+  display: flex
+  justify-content: space-between
+  
+  &__link
+    position: relative
+    border-radius: 3px
+    transition: .2s ease
+    font-size: 16px
+    width: 100%
+    text-align: center
+    >a
+      display: block
+      padding: 20px 0
+      color: #fff
+      width: 100%
+
+    .fa-chevron-down
+      position: absolute
+      right: 35px
+      color: #fff
+      transition: .25s ease-in-out
+
+    &:hover
+      background: #707079
+      .fa-chevron-down
+        transform: rotate(-180deg) scale(1.2)
+
+    &:hover >.sb-menu
+      display: flex
+      animation: subMenuHover 0.25s ease-in-out
+
+// подменю
+
+.sb-menu
+  position: absolute
+  right: 0
+  background: $PepDark - 10
+  display: none
+  flex-direction: column
+
+  &__link
+    padding: 15px 30px
+    color: #ffffff
+    &:hover
+      background: $PepDark
+
+
+
+
+////////////////////////////////////////////
+  ////////////    Slider     ////////////
+////////////////////////////////////////////
+
+.slider
+  height: 450px
+  width: 100%
+  background: url(../img/sld4.jpg) center/cover no-repeat
+
+  h2
+    padding: 0
+    margin: 0
+
+  .cont
+    display: flex
+
+  .sliderWP
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    color: #fff
+    margin: auto
+    margin-top: 150px
+    text-align: center
+    &__title
+      width: 100%
+      font-size: 30px
+    &__btn
+      color: #fff
+      margin: 20px auto
+      background: $Green
+      border: 1px solid #fff
+      border-radius: 4px
+      padding: 12.5px 25px
+      transition: .25s linear
+      &:hover
+        background: #ffffff
+        color:#4cb600
+        border: 1px solid #4cb600
+
+////////////////////////////////////////////
+  ////////////    Service     ////////////
+////////////////////////////////////////////
+      
+.service
+  background: $Green
+  width: 100%
+  height: 120px
+
+  .serviceWP
+    display: flex
+    justify-content: space-around
+    align-items: center
+    text-align: center
+
+    i
+      font-size: 56px
+
+    h2
+      margin: 5px 0
+      padding: 0
+
+    &__item
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      background: #fff
+      margin-top: -70px
+      border-radius: 50% 
+      border: 3px solid $Green
+      width: 175px
+      height: 175px
+      transition: .25s linear
+      &:hover
+        background: $PepDark
+        border: 3px solid #fff
+        &> i
+          animation: opacityAnim .25s linear
+          position: absolute
+          opacity: .25
+          left: 35%
+        .serviceWP__title
+          transform: translateY(0px)
+          color: #fff
+
+      
+
+
+    &__title
+      color: #272727
+      font-size: 16px
+      transition: transform .25s
+
+    i
+      color: $Green
+      transition: 0.25s linear
+
+////////////////////////////////////////////
+  ////////////    About Us    ////////////
+////////////////////////////////////////////
+
+.about-us
+  margin: 30px 0
+
+  .title-about
+    margin-left: 50px
+    font-size: 36px
