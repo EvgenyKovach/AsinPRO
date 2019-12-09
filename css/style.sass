@@ -262,15 +262,38 @@ nav
 ////////////////////////////////////////////
 
 .about-us
-  padding: 30px 0
+  padding: 60px 0
 
   .aboutWP
     margin-left: 50px
     &__title
-      font-size: 36px
+      font-size: 40px
       border-bottom: 1px solid $Green
     &__text
       margin: 15px 0
+
+  .about-cards
+    display: flex
+    justify-content: space-between
+    text-align: center
+
+    &__item
+      display: flex
+      flex-direction: column
+      background: $PepDark
+      padding: 10px 20px
+      min-height: 200px
+      width: 15%
+    &__title
+      color: #ffffff
+      border-bottom: 1px solid #8eff3d
+      font-size: 20px
+      padding: 10px 0
+    &__text
+      margin: auto 0
+      color: #ddd
+
+
 
 ////////////////////////////////////////////
   /////////    akcii block    //////////
@@ -281,7 +304,7 @@ nav
   background: $PepDark
   &__title
     margin-left: 50px
-    font-size: 36px
+    font-size: 40px
     color: #fff
 
   .akciiWP
@@ -307,9 +330,59 @@ nav
       background: url(../img/akcii3.jpg) center/cover no-repeat
 
     &__title
-      margin-bottom: auto
+      margin: auto 0
       width: 100%
       color: #ffffff
       font-size: 26px
       background: #00000099
       padding: 5px 10px
+
+////////////////////////////////////////////
+  /////////    catalog block    //////////
+////////////////////////////////////////////
+
+.catalog
+  padding: 30px 0
+  
+  &__title
+    margin-left: 50px
+    font-size: 40px
+    color: #000
+
+  .catalogWP
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 15px 0px 0 50px
+
+    &__item
+      display: flex
+      flex-direction: column
+      width: 24%
+      min-height: 255px
+      margin-bottom: 20px
+      background: url(../img/tovar/tovar_1.jpg) center/cover no-repeat
+
+    &__name
+      background: $Green
+      color: #fff
+      font-size: 24px
+      padding: 5px 10px 0
+
+    &__btns
+      display: flex
+      margin-top: auto
+      width: 100%
+
+    &__btn
+      flex-basis: 50%
+      text-align: center
+      display: block
+      padding: 5px 0
+      color: #fff
+
+    .bye
+      background: $Green
+    
+    .catalog-item
+      background: $PepDark
