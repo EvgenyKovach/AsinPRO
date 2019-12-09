@@ -262,11 +262,54 @@ nav
 ////////////////////////////////////////////
 
 .about-us
-  margin: 30px 0
+  padding: 30px 0
 
   .aboutWP
     margin-left: 50px
     &__title
       font-size: 36px
+      border-bottom: 1px solid $Green
     &__text
       margin: 15px 0
+
+////////////////////////////////////////////
+  /////////    akcii block    //////////
+////////////////////////////////////////////
+
+.akcii
+  padding: 30px 0
+  background: $PepDark
+  &__title
+    margin-left: 50px
+    font-size: 36px
+    color: #fff
+
+  .akciiWP
+    margin: 15px 0px 0 50px
+    display: flex
+    justify-content: space-between
+
+    &__item
+      transition: .25s
+      display: flex
+      text-align: center
+      width: 30%
+      height: 250px
+      background: url(../img/akcii2.jpg) center/cover no-repeat
+      border: 1px solid #000
+      &:hover
+        transform: scale(1.05)
+    .akciiWP__item:nth-child(1)
+      background: url(../img/akcii1.jpg) center/cover no-repeat
+    .akciiWP__item:nth-child(2)
+      background: url(../img/akcii2.jpg) center/cover no-repeat
+    .akciiWP__item:nth-child(3)
+      background: url(../img/akcii3.jpg) center/cover no-repeat
+
+    &__title
+      margin-bottom: auto
+      width: 100%
+      color: #ffffff
+      font-size: 26px
+      background: #00000099
+      padding: 5px 10px
