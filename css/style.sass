@@ -39,6 +39,10 @@ a
   &:hover
     background: #5cdd00
 
+.title
+  margin: 20px 0
+  font-size: 40px
+
 ////////////////////////////////////////////
   ////////////    HEADER   //////////////
 ////////////////////////////////////////////
@@ -279,7 +283,7 @@ nav
       display: flex
       flex-direction: column
       background: $PepDark
-      box-shadow: 0 0 12px 1px #333
+      box-shadow: 0 0 4px 1px #333
       padding: 10px 20px
       min-height: 200px
       width: 15%
@@ -364,7 +368,7 @@ nav
     &__name
       background: $Green
       color: #fff
-      font-size: 24px
+      font-size: 22px
       padding: 5px 10px 0
 
     &__btns
@@ -381,6 +385,52 @@ nav
 
     .bye
       background: $Green
+      transition: .25s
+      &:hover
+        background: $Green + 30
     
     .catalog-item
       background: $PepDark
+      transition: .25s
+      &:hover
+        background: $PepDark + 30
+
+////////////////////////////////////////////
+  ////////////    REVIEW   //////////////
+////////////////////////////////////////////
+.reviews
+  background: $PepDark
+  padding: 35px 0
+
+  .title
+    color: #fff
+.reviewWP
+  display: flex
+  justify-content: space-between
+
+
+  &__item
+    flex-basis: 18%
+    min-height: 300px
+    border: 2px solid $Green
+
+  &__item:nth-child(1)
+    background: url(../img/reviews/review-1.jpg) center/cover no-repeat
+  &__item:nth-child(2)
+    background: url(../img/reviews/review-2.jpg) center/cover no-repeat
+  &__item:nth-child(3)
+    background: url(../img/reviews/review-3.jpg) center/cover no-repeat
+  &__item:nth-child(4)
+    background: url(../img/reviews/review-4.jpg) center/cover no-repeat
+  &__item:nth-child(5)
+    background: url(../img/reviews/review-5.jpg) center/cover no-repeat
+
+.btnAllReview
+  display: block
+  margin-top: 40px
+  font-size: 22px
+  width: 100%
+  text-align: center
+  padding: 5px 7px
+  a
+    color: #fff

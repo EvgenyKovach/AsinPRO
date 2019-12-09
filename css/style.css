@@ -81,6 +81,11 @@ a {
   background: #5cdd00;
 }
 
+.title {
+  margin: 20px 0;
+  font-size: 40px;
+}
+
 .headerWP {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,8 +426,8 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #51515d;
-  -webkit-box-shadow: 0 0 12px 1px #333;
-          box-shadow: 0 0 12px 1px #333;
+  -webkit-box-shadow: 0 0 4px 1px #333;
+          box-shadow: 0 0 4px 1px #333;
   padding: 10px 20px;
   min-height: 200px;
   width: 15%;
@@ -542,7 +547,7 @@ nav {
 .catalog .catalogWP__name {
   background: #4cb600;
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   padding: 5px 10px 0;
 }
 
@@ -565,9 +570,79 @@ nav {
 
 .catalog .catalogWP .bye {
   background: #4cb600;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.catalog .catalogWP .bye:hover {
+  background: #6ad41e;
 }
 
 .catalog .catalogWP .catalog-item {
   background: #51515d;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.catalog .catalogWP .catalog-item:hover {
+  background: #6f6f7b;
+}
+
+.reviews {
+  background: #51515d;
+  padding: 35px 0;
+}
+
+.reviews .title {
+  color: #fff;
+}
+
+.reviewWP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviewWP__item {
+  -ms-flex-preferred-size: 18%;
+      flex-basis: 18%;
+  min-height: 300px;
+  border: 2px solid #4cb600;
+}
+
+.reviewWP__item:nth-child(1) {
+  background: url(../img/reviews/review-1.jpg) center/cover no-repeat;
+}
+
+.reviewWP__item:nth-child(2) {
+  background: url(../img/reviews/review-2.jpg) center/cover no-repeat;
+}
+
+.reviewWP__item:nth-child(3) {
+  background: url(../img/reviews/review-3.jpg) center/cover no-repeat;
+}
+
+.reviewWP__item:nth-child(4) {
+  background: url(../img/reviews/review-4.jpg) center/cover no-repeat;
+}
+
+.reviewWP__item:nth-child(5) {
+  background: url(../img/reviews/review-5.jpg) center/cover no-repeat;
+}
+
+.btnAllReview {
+  display: block;
+  margin-top: 40px;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+  padding: 5px 7px;
+}
+
+.btnAllReview a {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
