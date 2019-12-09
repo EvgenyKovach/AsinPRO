@@ -21,7 +21,7 @@ body
   max-width: 1400px
   height: 100%
   margin: 0 auto
-  padding: 0 15px
+  padding: 0 45px
 
 a
   text-decoration: none
@@ -46,7 +46,6 @@ a
 .headerWP
   display: flex
   justify-content: space-between
-  margin: 0 50px
 
   .headerWP__logo
     display: flex
@@ -265,7 +264,6 @@ nav
   padding: 60px 0
 
   .aboutWP
-    margin-left: 50px
     &__title
       font-size: 40px
       border-bottom: 1px solid $Green
@@ -281,13 +279,17 @@ nav
       display: flex
       flex-direction: column
       background: $PepDark
+      box-shadow: 0 0 12px 1px #333
       padding: 10px 20px
       min-height: 200px
       width: 15%
+      transition: 2s linear
+      &:hover
+        transform: scale(1.03)
     &__title
       color: #ffffff
       border-bottom: 1px solid #8eff3d
-      font-size: 20px
+      font-size: 18px
       padding: 10px 0
     &__text
       margin: auto 0
@@ -303,12 +305,10 @@ nav
   padding: 30px 0
   background: $PepDark
   &__title
-    margin-left: 50px
     font-size: 40px
     color: #fff
 
   .akciiWP
-    margin: 15px 0px 0 50px
     display: flex
     justify-content: space-between
 
@@ -345,7 +345,6 @@ nav
   padding: 30px 0
   
   &__title
-    margin-left: 50px
     font-size: 40px
     color: #000
 
@@ -353,7 +352,6 @@ nav
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    margin: 15px 0px 0 50px
 
     &__item
       display: flex
