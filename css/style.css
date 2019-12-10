@@ -679,5 +679,7 @@ nav {
 footer {
   min-height: 150px;
   background: url(../img/phonFooter.jpg) center/cover repeat;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */
