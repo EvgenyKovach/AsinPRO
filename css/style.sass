@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap')
-@import "animation"
+@import "animation", "mixins"
 
 
 $Green: #4cb600
@@ -22,6 +22,8 @@ body
   height: 100%
   margin: 0 auto
   padding: 0 45px
+  +bp(800px)
+    padding: 0 15px
 
 a
   text-decoration: none
@@ -50,11 +52,13 @@ a
 .headerWP
   display: flex
   justify-content: space-between
+  +bp(800px)
+    flex-direction: column
 
   .headerWP__logo
     display: flex
     font-size: 46px
-    background: $PepDark
+    background: $Green
     padding: 0 10px
     .logo
       margin-top: auto
@@ -115,6 +119,8 @@ nav
 .navWP
   display: flex
   justify-content: space-between
+  +bp(800px)
+    flex-direction: column
   
   &__link
     position: relative
@@ -167,7 +173,7 @@ nav
 ////////////////////////////////////////////
 
 .slider
-  height: 450px
+  min-height: 450px
   width: 100%
   background: url(../img/sld4.jpg) center/cover no-repeat
 
@@ -186,6 +192,8 @@ nav
     margin: auto
     margin-top: 150px
     text-align: center
+    +bp(800px)
+      flex-wrap: wrap
     &__title
       width: 100%
       font-size: 30px
@@ -209,16 +217,20 @@ nav
 .service
   background: $Green
   width: 100%
-  height: 120px
+  min-height: 120px
 
   .serviceWP
     display: flex
     justify-content: space-around
     align-items: center
     text-align: center
+    +bp(800px)
+      flex-wrap: wrap
 
     i
       font-size: 56px
+      +bp(800px)
+        font-size: 35px
 
     h2
       margin: 5px 0
@@ -236,6 +248,11 @@ nav
       width: 175px
       height: 175px
       transition: .25s linear
+      +bp(800px)
+        width: 139px
+        height: 139px
+        margin-top: 0
+
       &:hover
         background: $PepDark
         border: 3px solid #fff
@@ -248,13 +265,12 @@ nav
           transform: translateY(0px)
           color: #fff
 
-      
-
-
     &__title
       color: #272727
       font-size: 16px
       transition: transform .25s
+      +bp(800px)
+        font-size: 13px
 
     i
       color: $Green
@@ -266,6 +282,8 @@ nav
 
 .about-us
   padding: 60px 0
+  +bp(800px)
+    padding: 20px 0
 
   .aboutWP
     &__title
@@ -278,6 +296,9 @@ nav
     display: flex
     justify-content: space-between
     text-align: center
+    +bp(800px)
+      flex-direction: column
+      align-items: center
 
     &__item
       display: flex
@@ -288,6 +309,10 @@ nav
       min-height: 200px
       width: 15%
       transition: 2s linear
+      +bp(800px)
+        width: 85%
+        min-height: auto
+        margin: 5px 0
       &:hover
         transform: scale(1.03)
     &__title
@@ -315,6 +340,9 @@ nav
   .akciiWP
     display: flex
     justify-content: space-between
+    +bp(800px)
+      flex-direction: column
+      align-items: center
 
     &__item
       transition: .25s
@@ -324,6 +352,9 @@ nav
       height: 250px
       background: url(../img/akcii2.jpg) center/cover no-repeat
       border: 1px solid #000
+      +bp(800px)
+        width: 85%
+        margin: 5px 0
       &:hover
         transform: scale(1.05)
     .akciiWP__item:nth-child(1)
@@ -339,7 +370,7 @@ nav
       color: #ffffff
       font-size: 26px
       background: #00000099
-      padding: 5px 10px
+      padding: 5px 10px 
 
 ////////////////////////////////////////////
   /////////    catalog block    //////////
@@ -364,12 +395,23 @@ nav
       min-height: 255px
       margin-bottom: 20px
       background: url(../img/tovar/tovar_1.jpg) center/cover no-repeat
+      +bp(800px)
+        width: 48%
+        min-height: 170px
+    
+    &__item:nth-child(5),
+    &__item:nth-child(6),
+    &__item:nth-child(7),
+    &__item:nth-child(8)
+      display: none
 
     &__name
       background: $Green
       color: #fff
       font-size: 22px
       padding: 5px 10px 0
+      +bp(800px)
+        font-size: 16px
 
     &__btns
       display: flex
@@ -382,6 +424,8 @@ nav
       display: block
       padding: 5px 0
       color: #fff
+      +bp(800px)
+        font-size: 16px
 
     .bye
       background: $Green
@@ -407,12 +451,18 @@ nav
 .reviewWP
   display: flex
   justify-content: space-between
+  +bp(800px)
+    flex-wrap: wrap
+    justify-content: center
 
 
   &__item
     flex-basis: 18%
     min-height: 300px
     border: 2px solid $Green
+    +bp(800px)
+      flex-basis: 90%
+      margin: 5px 0
 
   &__item:nth-child(1)
     background: url(../img/reviews/review-1.jpg) center/cover no-repeat
