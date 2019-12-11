@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap')
 @import "animation", "mixins"
 
 
 $Green: #4cb600
 
-$PepDark: #51515d
-$PepLight: #707079
+$PepDark: #353546
+$PepLight: #909090
 
 
 i
@@ -15,6 +15,7 @@ body
   margin: 0
   padding: 0
   color: #222
+  background: #ddd
   font-family: 'Roboto Condensed', sans-serif
 
 .cont
@@ -27,19 +28,20 @@ body
 
 a
   text-decoration: none
-  color: #222
+  color: $PepDark
 
 .btn
   font-size: 18px
   text-align: center
   background: $Green
   color: #414141
-  padding: 15px 20px
+  padding: 10px 15px
   border-radius: 4px
   margin: 8px 0
   transition: .15s linear
+  border: 2px solid transparent
   &:hover
-    background: #5cdd00
+    border: 2px solid $PepDark
 
 .title
   margin: 20px 0
@@ -60,10 +62,11 @@ a
     font-size: 46px
     background: $Green
     padding: 0 10px
+    font-family: 'Montserrat', sans-serif
     .logo
       margin-top: auto
       margin-bottom: 30px
-      color: #fff
+      color: #f1f1f1
 
 
   .contacts-header
@@ -71,84 +74,90 @@ a
     flex-direction: column
     justify-content: center
     font-size: 22px
-    margin: 10px 0
+    margin: 20px
 
     &__btn
-      color: #fff
+      color: #f1f1f1
         
     &__tel1,
     &__tel2
-      marin: 8px 0
-      padding-left: 15px
+      padding: 5px 0
+      padding-left: 5px
+      font-size: 20px
+      font-weight: bold
       
       i
-        margin-right: 15px
+        margin-right: 5px
+        color: $PepDark
 
-  .header-adr
+  .headerWP-adr
     font-size: 18px
     display: flex
     flex-direction: column
-    align-items: center
-    align-content: center
-    justify-content: center
     
     &__btn
-      background: $Green
-      color: #fff
+      margin: 0 auto
+      color: $PepDark
       padding: 5px 10px
       border-radius: 4px
       transition: .15s linear
-      text-align: center
-      &:hover
-        background: #5cdd00
+      i
+        margin-right: 5px
+        color: $PepDark
 
     &__adr
       display: block
       i
         margin-right: 5px
+        color: $PepDark
 
 ////////////////////////////////////////////
   ////////////    NAVIGATON   ////////////
 ////////////////////////////////////////////
+
 nav
-  background: $PepDark
-  border-top: 5px solid #707079
   margin-top: 20px
   padding: 0 20px
+  background: $PepDark
 
 .navWP
   display: flex
-  justify-content: space-between
   +bp(800px)
     flex-direction: column
   
   &__link
     position: relative
     border-radius: 3px
-    transition: .2s ease
+    transition: .2s linear
     font-size: 16px
     width: 100%
     text-align: center
+    border-bottom: 4px solid transparent
+    border-top: 4px solid transparent
+    
     >a
       display: block
       padding: 20px 0
-      color: #fff
-      width: 100%
+      color: #f1f1f1
 
     .fa-chevron-down
       position: absolute
       right: 35px
-      color: #fff
-      transition: .25s ease-in-out
+      top: 35%
+      color: #ddd
+      transition: .25s linear
 
     &:hover
-      background: #707079
+      transform: translateY(4px)
+      box-shadow: inset 0px -4px 0 $PepLight
+      
       .fa-chevron-down
-        transform: rotate(-180deg) scale(1.2)
+        transform: rotate(90deg) scale(1.2) skew(5deg)
+        opacity: .75
 
     &:hover >.sb-menu
       display: flex
-      animation: subMenuHover 0.25s ease-in-out
+      animation: subMenuHover .3s linear
 
 // подменю
 
@@ -158,10 +167,12 @@ nav
   background: $PepDark - 10
   display: none
   flex-direction: column
+  transition: .25s linear
 
   &__link
-    padding: 15px 30px
-    color: #ffffff
+    padding: 15px 0
+    min-width: 225px    
+    color: #f1f1f1
     &:hover
       background: $PepDark
 
@@ -188,25 +199,28 @@ nav
     display: flex
     flex-wrap: wrap
     align-items: center
-    color: #fff
+    color: #f1f1f1
     margin: auto
     margin-top: 150px
     text-align: center
+    font-family: 'Montserrat', sans-serif
     +bp(800px)
       flex-wrap: wrap
     &__title
       width: 100%
       font-size: 30px
     &__btn
-      color: #fff
+      color: #f1f1f1
       margin: 20px auto
       background: $Green
-      border: 1px solid #fff
+      border: 1px solid #f1f1f1
       border-radius: 4px
       padding: 12.5px 25px
       transition: .25s linear
+      font-weight: bold
+      letter-spacing: 0.6px
       &:hover
-        background: #ffffff
+        background: #f1f1f1
         color:#4cb600
         border: 1px solid #4cb600
 
@@ -241,7 +255,7 @@ nav
       display: flex
       flex-direction: column
       justify-content: center
-      background: #fff
+      background: #f1f1f1
       margin-top: -70px
       border-radius: 50% 
       border: 3px solid $Green
@@ -255,7 +269,7 @@ nav
 
       &:hover
         background: $PepDark
-        border: 3px solid #fff
+        border: 3px solid #f1f1f1
         &> i
           animation: opacityAnim .25s linear
           position: absolute
@@ -263,11 +277,11 @@ nav
           left: 35%
         .serviceWP__title
           transform: translateY(0px)
-          color: #fff
+          color: #f1f1f1
 
     &__title
-      color: #272727
-      font-size: 16px
+      color: $PepDark
+      font-size: 14px
       transition: transform .25s
       +bp(800px)
         font-size: 13px
@@ -308,15 +322,13 @@ nav
       padding: 10px 20px
       min-height: 200px
       width: 15%
-      transition: 2s linear
+
       +bp(800px)
         width: 85%
         min-height: auto
         margin: 5px 0
-      &:hover
-        transform: scale(1.03)
     &__title
-      color: #ffffff
+      color: #f1f1f1
       border-bottom: 1px solid #8eff3d
       font-size: 18px
       padding: 10px 0
@@ -335,7 +347,7 @@ nav
   background: $PepDark
   &__title
     font-size: 40px
-    color: #fff
+    color: #f1f1f1
 
   .akciiWP
     display: flex
@@ -345,7 +357,7 @@ nav
       align-items: center
 
     &__item
-      transition: .25s
+      transition: .25s linear
       display: flex
       text-align: center
       width: 30%
@@ -356,7 +368,9 @@ nav
         width: 85%
         margin: 5px 0
       &:hover
-        transform: scale(1.05)
+        transform: scale(1.02) translate(-6px,-6px)
+        box-shadow: 6px 6px 0px #f1f1f133
+
     .akciiWP__item:nth-child(1)
       background: url(../img/akcii1.jpg) center/cover no-repeat
     .akciiWP__item:nth-child(2)
@@ -367,10 +381,11 @@ nav
     &__title
       margin: auto 0
       width: 100%
-      color: #ffffff
+      color: #f1f1f1ff
       font-size: 26px
       background: #00000099
       padding: 5px 10px 
+      
 
 ////////////////////////////////////////////
   /////////    catalog block    //////////
@@ -387,16 +402,21 @@ nav
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    +bp(520px)
+      justify-content: center
 
     &__item
       display: flex
       flex-direction: column
-      width: 24%
+      width: 325px
       min-height: 255px
+      border-radius: 2px
+      box-shadow: 0 0 3px #313131
+      margin: 0 10px
       margin-bottom: 20px
       background: url(../img/tovar/tovar_1.jpg) center/cover no-repeat
       +bp(800px)
-        width: 48%
+        width: 225px
         min-height: 170px
     
     &__item:nth-child(5),
@@ -406,10 +426,13 @@ nav
       display: none
 
     &__name
+      position: absolute
+      width: %
       background: $Green
-      color: #fff
+      color: #f1f1f1
       font-size: 22px
       padding: 5px 10px 0
+
       +bp(800px)
         font-size: 16px
 
@@ -423,7 +446,7 @@ nav
       text-align: center
       display: block
       padding: 5px 0
-      color: #fff
+      color: #f1f1f1
       +bp(800px)
         font-size: 16px
 
@@ -447,7 +470,7 @@ nav
   padding: 35px 0
 
   .title
-    color: #fff
+    color: #f1f1f1
 .reviewWP
   display: flex
   justify-content: space-between
@@ -483,7 +506,10 @@ nav
   padding: 5px 7px
   a
     margin: auto
-    color: #fff
+    color: #f1f1f1
+    &:hover
+      border: 2px solid #ddd
+    
 
 ////////////////////////////////////////////
   ////////////    AUTOPARK   ////////////
@@ -506,7 +532,7 @@ nav
   text-align: center
   padding: 5px 7px
   a
-    color: #fff
+    color: #f1f1f1
 
 ////////////////////////////////////////////
   ////////////    FOOTER    ////////////
@@ -514,5 +540,5 @@ nav
 
 footer
   min-height: 150px
-  background: url(../img/phonFooter.jpg) center/cover repeat
+  background: $PepDark
   box-sizing: border-box
