@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto&display=swap");
 @-webkit-keyframes subMenuHover {
   0% {
     -webkit-transform: translateY(-50px);
@@ -160,6 +160,18 @@ a {
   }
 }
 
+@media (max-width: 600px) {
+  .headerWP {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .headerWP .headerWP__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,8 +216,17 @@ a {
   }
 }
 
+@media (max-width: 600px) {
+  .headerWP .contacts-header {
+    width: auto;
+    padding-top: 20px;
+    margin-right: auto;
+  }
+}
+
 .headerWP .contacts-header__btn {
   color: #f1f1f1;
+  font-weight: 400;
 }
 
 .headerWP .contacts-header .btnBox {
@@ -231,11 +252,20 @@ a {
           flex-direction: column;
 }
 
+@media (max-width: 600px) {
+  .headerWP .headerWP-adr {
+    width: auto;
+    padding-top: 20px;
+    margin-right: auto;
+  }
+}
+
 .headerWP .headerWP-adr__btn {
   display: block;
   color: #353546;
   background: #ddd;
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
   padding: 3px 0;
 }
 
@@ -394,6 +424,7 @@ nav {
 .slider .sliderWP__title {
   width: 100%;
   font-size: 30px;
+  font-weight: 400;
 }
 
 .slider .sliderWP__btn {
@@ -405,7 +436,6 @@ nav {
   padding: 12.5px 25px;
   -webkit-transition: .25s linear;
   transition: .25s linear;
-  font-weight: bold;
   letter-spacing: 0.6px;
 }
 
