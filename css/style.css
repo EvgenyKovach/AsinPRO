@@ -42,8 +42,57 @@
   }
 }
 
+@-webkit-keyframes rotateService {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateService {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animationLic {
+  0% {
+    opacity: .25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animationLic {
+  0% {
+    opacity: .25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 i {
   color: #353546;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -75,7 +124,7 @@ a {
 .btn {
   font-size: 18px;
   text-align: center;
-  background: #4cb600;
+  background: #49af00;
   color: #414141;
   padding: 10px 15px;
   border-radius: 4px;
@@ -101,14 +150,13 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 20px 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .headerWP {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -116,15 +164,17 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 250px;
   font-size: 46px;
-  background: #4cb600;
-  padding: 0 10px;
+  background: #49af00;
+  border-radius: 3px;
+  padding: 0px 10px;
+  margin: 3px 0;
   font-family: 'Montserrat', sans-serif;
 }
 
 .headerWP .headerWP__logo .logo {
-  margin-top: auto;
-  margin-bottom: 30px;
+  margin: auto;
   color: #f1f1f1;
 }
 
@@ -140,23 +190,34 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 22px;
-  margin: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 950px) {
+  .headerWP .contacts-header {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    padding-top: 20px;
+  }
 }
 
 .headerWP .contacts-header__btn {
   color: #f1f1f1;
 }
 
-.headerWP .contacts-header__tel1, .headerWP .contacts-header__tel2 {
-  padding: 5px 0;
-  padding-left: 5px;
-  font-size: 20px;
-  font-weight: bold;
+.headerWP .contacts-header .btnBox {
+  margin: 20px 0 0 20px;
 }
 
-.headerWP .contacts-header__tel1 i, .headerWP .contacts-header__tel2 i {
-  margin-right: 5px;
-  color: #353546;
+.headerWP .contacts-header__tel1, .headerWP .contacts-header__tel2 {
+  letter-spacing: 1px;
+  padding-left: 5px;
+  font-size: 18px;
+  padding: 3px 0;
+  font-weight: bold;
 }
 
 .headerWP .headerWP-adr {
@@ -171,47 +232,36 @@ a {
 }
 
 .headerWP .headerWP-adr__btn {
-  margin: 0 auto;
+  display: block;
   color: #353546;
-  padding: 5px 10px;
-  border-radius: 4px;
-  -webkit-transition: .15s linear;
-  transition: .15s linear;
-}
-
-.headerWP .headerWP-adr__btn i {
-  margin-right: 5px;
-  color: #353546;
+  background: #ddd;
+  font-weight: bold;
+  padding: 3px 0;
 }
 
 .headerWP .headerWP-adr__adr {
   display: block;
+  padding: 3px 0;
+  color: #353546;
 }
 
-.headerWP .headerWP-adr__adr i {
+.headerWP i {
   margin-right: 5px;
   color: #353546;
 }
 
 nav {
+  position: relative;
   margin-top: 20px;
   padding: 0 20px;
   background: #353546;
+  z-index: 2;
 }
 
 .navWP {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (max-width: 800px) {
-  .navWP {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 .navWP__link {
@@ -230,12 +280,13 @@ nav {
   display: block;
   padding: 20px 0;
   color: #f1f1f1;
+  font-weight: bold;
 }
 
 .navWP__link .fa-chevron-down {
   position: absolute;
   right: 35px;
-  top: 35%;
+  top: 38%;
   color: #ddd;
   -webkit-transition: .25s linear;
   transition: .25s linear;
@@ -273,12 +324,15 @@ nav {
           flex-direction: column;
   -webkit-transition: .25s linear;
   transition: .25s linear;
+  z-index: 2;
 }
 
 .sb-menu__link {
   padding: 15px 0;
   min-width: 225px;
   color: #f1f1f1;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .sb-menu__link:hover {
@@ -286,9 +340,21 @@ nav {
 }
 
 .slider {
-  min-height: 450px;
+  position: relative;
+  min-height: 550px;
   width: 100%;
-  background: url(../img/sld4.jpg) center/cover no-repeat;
+  background: url(../img/sld5.jpg) center/cover no-repeat;
+}
+
+.slider .lic {
+  position: absolute;
+  font-size: 18px;
+  width: 80vw;
+  top: 0px;
+  color: #ddd;
+  -webkit-transform: translate(7vw, 10px);
+          transform: translate(7vw, 10px);
+  animation: animationLic 1s infinite linear alternate-reverse;
 }
 
 .slider h2 {
@@ -313,7 +379,7 @@ nav {
           align-items: center;
   color: #f1f1f1;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 200px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
@@ -333,7 +399,7 @@ nav {
 .slider .sliderWP__btn {
   color: #f1f1f1;
   margin: 20px auto;
-  background: #4cb600;
+  background: #49af00;
   border: 1px solid #f1f1f1;
   border-radius: 4px;
   padding: 12.5px 25px;
@@ -345,12 +411,12 @@ nav {
 
 .slider .sliderWP__btn:hover {
   background: #f1f1f1;
-  color: #4cb600;
-  border: 1px solid #4cb600;
+  color: #49af00;
+  border: 1px solid #49af00;
 }
 
 .service {
-  background: #4cb600;
+  background: #49af00;
   width: 100%;
   min-height: 120px;
 }
@@ -404,11 +470,11 @@ nav {
   background: #f1f1f1;
   margin-top: -70px;
   border-radius: 50%;
-  border: 3px solid #4cb600;
+  border: 3px solid #49af00;
   width: 175px;
   height: 175px;
-  -webkit-transition: .25s linear;
-  transition: .25s linear;
+  -webkit-transition: .45s linear;
+  transition: .45s linear;
 }
 
 @media (max-width: 800px) {
@@ -425,8 +491,8 @@ nav {
 }
 
 .service .serviceWP__item:hover > i {
-  -webkit-animation: opacityAnim .25s linear;
-          animation: opacityAnim .25s linear;
+  -webkit-animation: opacityAnim 1.05s linear;
+          animation: opacityAnim 1.05s linear;
   position: absolute;
   opacity: .25;
   left: 35%;
@@ -454,7 +520,7 @@ nav {
 }
 
 .service .serviceWP i {
-  color: #4cb600;
+  color: #49af00;
   -webkit-transition: 0.25s linear;
   transition: 0.25s linear;
 }
@@ -471,7 +537,7 @@ nav {
 
 .about-us .aboutWP__title {
   font-size: 40px;
-  border-bottom: 1px solid #4cb600;
+  border-bottom: 1px solid #49af00;
 }
 
 .about-us .aboutWP__text {
@@ -508,15 +574,15 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #353546;
-  -webkit-box-shadow: 0 0 4px 1px #333;
-          box-shadow: 0 0 4px 1px #333;
-  padding: 10px 20px;
   min-height: 200px;
-  width: 15%;
+  background: #d8d8d8;
+  -webkit-box-shadow: 0 0 4px 1px #353546;
+          box-shadow: 0 0 4px 1px #353546;
+  padding: 10px 15px;
+  margin-left: 35px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .about-us .about-cards__item {
     width: 85%;
     min-height: auto;
@@ -524,16 +590,23 @@ nav {
   }
 }
 
+.about-us .about-cards__item:first-child {
+  margin-left: 0;
+}
+
 .about-us .about-cards__title {
-  color: #f1f1f1;
-  border-bottom: 1px solid #8eff3d;
+  position: relative;
+  color: #363636;
   font-size: 18px;
+  font-weight: bold;
   padding: 10px 0;
 }
 
 .about-us .about-cards__text {
-  margin: auto 0;
-  color: #ddd;
+  margin-top: auto;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #444444;
 }
 
 .akcii {
@@ -675,7 +748,7 @@ nav {
 .catalog .catalogWP__name {
   position: absolute;
   width: %;
-  background: #4cb600;
+  background: #49af00;
   color: #f1f1f1;
   font-size: 22px;
   padding: 5px 10px 0;
@@ -711,13 +784,13 @@ nav {
 }
 
 .catalog .catalogWP .bye {
-  background: #4cb600;
+  background: #49af00;
   -webkit-transition: .25s;
   transition: .25s;
 }
 
 .catalog .catalogWP .bye:hover {
-  background: #6ad41e;
+  background: #67cd1e;
 }
 
 .catalog .catalogWP .catalog-item {
@@ -762,7 +835,7 @@ nav {
   -ms-flex-preferred-size: 18%;
       flex-basis: 18%;
   min-height: 300px;
-  border: 2px solid #4cb600;
+  border: 2px solid #49af00;
 }
 
 @media (max-width: 800px) {
