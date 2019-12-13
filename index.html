@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <title>Project ASIN</title>
@@ -33,7 +38,13 @@
   </header>
   <nav>
     <div class="cont">
+      <div class="navBtn nav__open">
+        МЕНЮ <i class="fas fa-caret-square-down"></i>
+      </div>
       <div class="navWP">
+        <div class="navBtn nav__hide">
+          <i class="fas fa-times"></i>
+        </div>
         <div class="navWP__link"><a href="#" class="">Главная</a></div>
         <div class="navWP__link"><a href="#" class="">О нас</a></div>
         <div class="navWP__link"><a href="#" class="">Услуги <i class="fas fa-chevron-down"></i></a>
@@ -50,15 +61,20 @@
     </div>
   </nav>
   <div class="slider">
-    <div class="cont">
       <p class="lic">Лицензия Серия 056 №00159 от 29 марта 2016 г. на осуществление
 деятельности по сбору, транспортированию отхода IV класса опасности.</p>
-      <div class="sliderWP">
-        <h2 class="sliderWP__title">Компания по экологическим услугам в Оренбурге - <span style="font-weight: bold">AsinPRO</span></h2>
-        <a href="" class="sliderWP__btn">Сделать заказ</a>
-        <a href="" class="sliderWP__btn">Заказать звонок</a>
+      <div class="sliderBOX">
+        <div class="sliderWP" style="background: url(../img/sld4.jpg) center/cover no-repeat">
+          <h2 class="sliderWP__title">Компания по экологическим услугам в Оренбурге - <span style="font-weight: bold">AsinPRO</span></h2>
+          <a href="" class="sliderWP__btn">Сделать заказ</a>
+          <a href="" class="sliderWP__btn">Заказать звонок</a>
+        </div>
+        <div class="sliderWP" style="background: url(../img/sld5.jpg) center/cover no-repeat">
+          <h2 class="sliderWP__title">Компания по экологическим услугам в Оренбурге - <span style="font-weight: bold">AsinPRO</span></h2>
+          <a href="" class="sliderWP__btn">Сделать заказ</a>
+          <a href="" class="sliderWP__btn">Заказать звонок</a>
+        </div>
       </div>
-    </div>
   </div>
   <div class="service">
     <div class="cont">
@@ -276,5 +292,27 @@
       </div>
     </div>
   </footer>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.sliderBOX').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplaySpeed: 3500,
+      dots: false
+    });
+    // меню
+    $('.nav__open').click(function () {
+      $('.navWP').css({display: "flex"});
+      $('.nav__open').css({display: "none"});
+      $('.nav__hide').css({display: "block"});
+    });
+    $('.nav__hide').click(function () {
+      $('.navWP').css({display: "none"});
+      $('.nav__hide').css({display: "none"});
+      $('.nav__open').css({display: "block"});
+    });
+
+  });
+</script>
 </body>
 </html>
