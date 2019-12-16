@@ -90,12 +90,12 @@
   0% {
     height: 0;
     opacity: 0;
-    -webkit-transform: translateX(-200px) rotatey(90deg);
-            transform: translateX(-200px) rotatey(90deg);
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
   }
   100% {
-    -webkit-transform: translateX(0px) rotateY(0deg);
-            transform: translateX(0px) rotateY(0deg);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
     opacity: 1;
     height: 350px;
   }
@@ -105,14 +105,44 @@
   0% {
     height: 0;
     opacity: 0;
-    -webkit-transform: translateX(-200px) rotatey(90deg);
-            transform: translateX(-200px) rotatey(90deg);
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
   }
   100% {
-    -webkit-transform: translateX(0px) rotateY(0deg);
-            transform: translateX(0px) rotateY(0deg);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
     opacity: 1;
     height: 350px;
+  }
+}
+
+@-webkit-keyframes menuClose {
+  0% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+    height: 350px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+    height: 60px;
+  }
+}
+
+@keyframes menuClose {
+  0% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+    height: 350px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+    height: 60px;
   }
 }
 
@@ -316,7 +346,6 @@ nav {
   padding: 0 20px;
   background: #353546;
   z-index: 2;
-  overflow: hidden;
 }
 
 .navBtn {
@@ -413,6 +442,12 @@ nav {
   display: flex;
   -webkit-animation: subMenuHover .3s linear;
           animation: subMenuHover .3s linear;
+}
+
+@media (max-width: 950px) {
+  .navWP__link:hover > .sb-menu {
+    display: none;
+  }
 }
 
 .sb-menu {
@@ -955,23 +990,15 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 325px;
-  min-height: 255px;
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+  min-height: 225px;
   border-radius: 2px;
   -webkit-box-shadow: 0 0 3px #313131;
           box-shadow: 0 0 3px #313131;
   margin: 0 10px;
   margin-bottom: 20px;
   background: url(../img/tovar/tovar_1.jpg) center/cover no-repeat;
-}
-
-@media (max-width: 1470px) {
-  .catalog .catalogWP__item {
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
-    margin: 0 5px;
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 800px) {
