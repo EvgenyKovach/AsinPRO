@@ -148,13 +148,13 @@ nav
 
 .navBtn
   display: none
-  padding: 20px 0
+  padding: 15px 0
   width: 100%
   text-align: center
   color: #f1f1f1
   i
     color: #f1f1f1
-    font-size: 26px
+    font-size: 18px
   
 .nav__open
   +bp(950px)
@@ -178,7 +178,7 @@ nav
     
     >a
       display: block
-      padding: 20px 0
+      padding: 15px 0
       color: #f1f1f1
       font-weight: bold
       +bp(950px)
@@ -186,10 +186,12 @@ nav
 
     .fa-chevron-down
       position: absolute
-      right: 10%
-      top: 38%
+      right: 15%
+      top: 33%
       color: #ddd
       transition: .25s linear
+      +bp(950px)
+        display: none
 
     &:hover
       transform: translateY(4px)
@@ -243,7 +245,9 @@ nav
     font-size: 18px
     top: 10px
     color: #ddd
-    animation: animationLic 1s infinite linear alternate-reverse;
+    animation: animationLic 1s infinite linear alternate-reverse
+    +bp(600px)
+      font-size: 14px
 
   h2
     padding: 0
@@ -369,7 +373,11 @@ nav
       +bp(800px)
         width: 139px
         height: 139px
-        margin-top: 0
+        margin: 5px 0
+      +bp(610px)
+        margin: 5px 40px
+      +bp(480px)
+        margin: 5px 10px
 
       &:hover
         background: $PepDark
@@ -382,6 +390,7 @@ nav
         .serviceWP__title
           transform: translateY(0px)
           color: #f1f1f1
+          padding: 0 5px
 
     &__title
       color: $PepDark
