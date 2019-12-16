@@ -173,6 +173,9 @@
           </div>
         </a>
       </div>
+      <div class="akciiWP__btn">
+        <a href="#" class="btn">Смотреть все</a>
+      </div>
     </div>
   </div>
   <div class="catalog">
@@ -254,6 +257,9 @@
           </div>
         </div>
       </div>
+      <div class="catalogWP__btnAll">
+        <a href="#" class="btn">Перейти в каталог</a>
+      </div>
     </div>
   </div>
   <div class="reviews">
@@ -275,7 +281,7 @@
     <div class="cont">
       <div class="avtoPark__title title">Наш автопарк</div>
       <div class="avtoParkWP">
-        <img src="img/autopark.png" alt="" width="80%">
+        <img src="img/autopark.png" alt="" width="65%">
       </div>
       <div href="#" class="btnAutopark"><a href="#" class="btn">Посмотреть весь автопарк</a></div>
     </div>
@@ -308,6 +314,16 @@
       slidesToScroll: 1,
       autoplaySpeed: 3500,
       dots: false
+    });
+
+    $('.catalogWP').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplaySpeed: 1500,
+      dots: false,
+      arrows: false,
+      autoplay: true,
+      cssEase: 'ease'
     });
     // меню
     $('.nav__open').click(function () {

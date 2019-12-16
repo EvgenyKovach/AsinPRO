@@ -146,9 +146,11 @@ p {
 body {
   margin: 0;
   padding: 0;
-  color: #222;
+  color: #353546;
   background: #ddd;
   font-family: 'Roboto Condensed', sans-serif;
+  -webkit-transition: .25s linear;
+  transition: .25s linear;
 }
 
 .cont {
@@ -187,6 +189,8 @@ a {
 }
 
 .title {
+  width: 100%;
+  text-align: center;
   margin: 20px 0;
   font-size: 40px;
 }
@@ -763,7 +767,7 @@ nav {
 }
 
 .about-us {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 @media (max-width: 800px) {
@@ -774,7 +778,6 @@ nav {
 
 .about-us .aboutWP__title {
   font-size: 40px;
-  border-bottom: 1px solid #49af00;
 }
 
 .about-us .aboutWP__text {
@@ -857,6 +860,7 @@ nav {
   margin-bottom: 20px;
   font-size: 14px;
   color: #444444;
+  padding: 5px 25px;
 }
 
 .akcii {
@@ -912,10 +916,8 @@ nav {
 }
 
 .akcii .akciiWP__item:hover {
-  -webkit-transform: scale(1.01) translate(-2px, -2px);
-          transform: scale(1.01) translate(-2px, -2px);
-  -webkit-box-shadow: 2px 2px 0px #f1f1f133;
-          box-shadow: 2px 2px 0px #f1f1f133;
+  -webkit-box-shadow: 0px 6px 0px #49af00;
+          box-shadow: 0px 6px 0px #49af00;
 }
 
 .akcii .akciiWP .akciiWP__item:nth-child(1) {
@@ -933,6 +935,25 @@ nav {
   font-size: 26px;
   background: #00000077;
   padding: 5px 10px;
+}
+
+.akcii .akciiWP__btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.akcii .akciiWP__btn a {
+  color: #f1f1f1;
+}
+
+.akcii .akciiWP__btn a:hover {
+  border-color: #f1f1f1;
 }
 
 .catalog {
@@ -989,6 +1010,14 @@ nav {
   background: url(../img/tovar/tovar_1.jpg) center/cover no-repeat;
 }
 
+@media (max-width: 1150px) {
+  .catalog .catalogWP__item {
+    min-height: 200px;
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+}
+
 @media (max-width: 800px) {
   .catalog .catalogWP__item {
     width: 225px;
@@ -1002,10 +1031,6 @@ nav {
     -ms-flex-preferred-size: 85%;
         flex-basis: 85%;
   }
-}
-
-.catalog .catalogWP__item:nth-child(5), .catalog .catalogWP__item:nth-child(6), .catalog .catalogWP__item:nth-child(7), .catalog .catalogWP__item:nth-child(8) {
-  display: none;
 }
 
 .catalog .catalogWP__name {
@@ -1065,6 +1090,12 @@ nav {
   background: #535364;
 }
 
+.catalog .catalogWP__btnAll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .reviews {
   background: #353546;
   padding: 35px 0;
@@ -1105,13 +1136,15 @@ nav {
   min-height: 275px;
   border: 2px solid #909090;
   border-bottom: 4px solid #49af00;
-  -webkit-transition: border .25s linear;
-  transition: border .25s linear;
+  -webkit-transition: .25s linear;
+  transition: .25s linear;
 }
 
 .reviewWP__item:hover {
   border: 2px solid #353546;
   border-bottom: 4px solid #49af00;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media (max-width: 800px) {
@@ -1236,7 +1269,7 @@ nav {
 
 .footerWP__contacts a {
   color: #f1f1f1;
-  padding: 5px 0;
+  padding: 2px 0;
 }
 
 .footerWP__menu {
