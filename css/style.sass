@@ -558,7 +558,6 @@ nav
 
     &__name
       position: absolute
-      width: %
       background: $Green
       color: #f1f1f1
       font-size: 22px
@@ -685,7 +684,40 @@ nav
   ////////////    FOOTER    ////////////
 ////////////////////////////////////////////
 
-footer
-  min-height: 150px
+.footer
   background: $PepDark
   box-sizing: border-box
+  padding: 20px 0
+
+.footerWP
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    a
+      color: #f1f1f1
+      padding: 5px 0
+  
+  &__menu
+    display: flex
+    a
+      color: #f1f1f1
+      font-size: 18px
+      padding: 5px 15px
+      margin: auto 0
+      &:hover
+        text-decoration: underline
+        text-decoration-color: $Green
+
+  &__logo
+    display: flex
+    font-size: 46px
+    border-radius: 3px
+    padding: 0px 10px
+    margin: 3px 0
+    font-family: 'Montserrat', sans-serif
+    .logo
+      color: #f1f1f1
