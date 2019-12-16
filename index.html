@@ -169,11 +169,6 @@
         </a>
         <a href="#" class="akciiWP__item">
           <div class="akciiWP__title">
-            Скидка 10% за пакет услуг
-          </div>
-        </a>
-        <a href="#" class="akciiWP__item">
-          <div class="akciiWP__title">
             Новогодняя скидка 7%
           </div>
         </a>
@@ -305,11 +300,13 @@
       $('.navWP').css({display: "flex"});
       $('.nav__open').css({display: "none"});
       $('.nav__hide').css({display: "block"});
+      $('nav').css({animation: "menuOpen .55s ease-in-out"});
     });
     $('.nav__hide').click(function () {
       $('.navWP').css({display: "none"});
       $('.nav__hide').css({display: "none"});
       $('.nav__open').css({display: "block"});
+      $('nav').css({animation: "NONE"});
     });
 
   });

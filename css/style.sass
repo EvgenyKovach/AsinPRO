@@ -145,6 +145,7 @@ nav
   padding: 0 20px
   background: $PepDark
   z-index: 2
+  overflow: hidden
 
 .navBtn
   display: none
@@ -250,7 +251,7 @@ nav
       font-size: 14px
 
   h2
-    padding: 0
+    padding: 0 20px
     margin: 0
 
   .cont
@@ -356,7 +357,7 @@ nav
 
     h2
       margin: 5px 0
-      padding: 0
+      padding: 0 5px
 
     &__item
       position: relative
@@ -423,6 +424,8 @@ nav
     display: flex
     justify-content: space-between
     text-align: center
+    +bp(950px)
+      flex-wrap: wrap
     +bp(800px)
       flex-direction: column
       align-items: center
@@ -430,15 +433,18 @@ nav
     &__item
       display: flex
       flex-direction: column
-      min-height: 200px
       background: #d8d8d8
       box-shadow: 0 0 4px 1px $PepDark
-      padding: 10px 15px
+      padding: 5px 15px
       margin-left: 35px
+      min-height: 100px
+      width: 19%
       +bp(950px)
-        width: 85%
+        width: 25%
         min-height: auto
         margin: 5px 0
+      +bp(800px)
+        width: 85%
     &__item:first-child
       margin-left: 0
 
@@ -447,11 +453,10 @@ nav
       color: #363636
       font-size: 18px
       font-weight: bold
-      padding: 10px 0
+      padding: 15px 0
 
 
     &__text
-      margin-top: auto
       margin-bottom: 20px
       font-size: 14px
       color: #444444
@@ -481,30 +486,29 @@ nav
       transition: .25s linear
       display: flex
       text-align: center
-      width: 30%
+      width: 45%
       height: 250px
       background: url(../img/akcii2.jpg) center/cover no-repeat
-      border: 1px solid #000
+      border: 1px solid #666
+      border-radius: 2px
       +bp(800px)
         width: 85%
         margin: 5px 0
       &:hover
-        transform: scale(1.02) translate(-6px,-6px)
-        box-shadow: 6px 6px 0px #f1f1f133
+        transform: scale(1.01) translate(-2px,-2px)
+        box-shadow: 2px 2px 0px #f1f1f133
 
     .akciiWP__item:nth-child(1)
       background: url(../img/akcii1.jpg) center/cover no-repeat
     .akciiWP__item:nth-child(2)
-      background: url(../img/akcii2.jpg) center/cover no-repeat
-    .akciiWP__item:nth-child(3)
       background: url(../img/akcii3.jpg) center/cover no-repeat
 
     &__title
-      margin: auto 0
+      margin: 0 auto auto auto
       width: 100%
       color: #f1f1f1ff
       font-size: 26px
-      background: #00000099
+      background: #00000077
       padding: 5px 10px 
       
 
@@ -523,6 +527,8 @@ nav
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    +bp(1124px)
+      justify-content: space-around
     +bp(520px)
       justify-content: center
 
@@ -536,9 +542,16 @@ nav
       margin: 0 10px
       margin-bottom: 20px
       background: url(../img/tovar/tovar_1.jpg) center/cover no-repeat
+      +bp(1470px)
+        flex-basis: 48%
+        margin: 0 5px
+        margin-bottom: 20px
       +bp(800px)
         width: 225px
         min-height: 170px
+      +bp(530px)
+        min-width: 220px
+        flex-basis: 85%
     
     &__item:nth-child(5),
     &__item:nth-child(6),
@@ -589,6 +602,8 @@ nav
 .reviews
   background: $PepDark
   padding: 35px 0
+  +bp(1200px)
+    padding: 25px 0
 
   .title
     color: #f1f1f1
@@ -602,11 +617,22 @@ nav
 
   &__item
     flex-basis: 18%
-    min-height: 300px
-    border: 2px solid $Green
+    min-height: 275px
+    border: 2px solid $PepLight
+    border-bottom: 4px solid $Green
+    transition: border .25s linear
+    &:hover
+      border: 2px solid $PepDark
+      border-bottom: 4px solid $Green
     +bp(800px)
-      flex-basis: 90%
-      margin: 5px 0
+      flex-basis: 28%
+      min-height: 225px
+      margin: 10px
+    +bp(500px)
+      flex-basis: 40%
+      min-height: 200px
+
+
 
   &__item:nth-child(1)
     background: url(../img/reviews/review-1.jpg) center/cover no-repeat
@@ -623,11 +649,13 @@ nav
   display: flex
   margin-top: 40px
   font-size: 22px
-  width: 100%
   padding: 5px 7px
+  +bp(800px)
+    margin-top: 20px
   a
     margin: auto
     color: #f1f1f1
+    min-width: 225px
     &:hover
       border: 2px solid #ddd
     
@@ -654,6 +682,7 @@ nav
   padding: 5px 7px
   a
     color: #f1f1f1
+    width: 100%
 
 ////////////////////////////////////////////
   ////////////    FOOTER    ////////////
