@@ -560,7 +560,7 @@ nav
       position: absolute
       background: $Green
       color: #f1f1f1
-      font-size: 22px
+      font-size: 18px
       padding: 5px 10px 0
 
       +bp(800px)
@@ -692,6 +692,7 @@ nav
 .footerWP
   display: flex
   justify-content: space-between
+  flex-wrap: wrap
   width: 100%
 
   &__contacts
@@ -703,6 +704,8 @@ nav
   
   &__menu
     display: flex
+    +bp(800px)
+      flex-direction: column
     a
       color: #f1f1f1
       font-size: 18px
