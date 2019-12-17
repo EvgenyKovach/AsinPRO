@@ -30,6 +30,8 @@ body
   padding: 0 45px
   +bp(800px)
     padding: 0 15px
+  +bp(450px)
+    padding: 0 5px
 
 a
   text-decoration: none
@@ -376,8 +378,8 @@ nav
       height: 175px
       transition: .45s linear
       +bp(800px)
-        width: 139px
-        height: 139px
+        width: 120px
+        height: 120px
         margin: 5px 0
       +bp(610px)
         margin: 5px 40px
@@ -402,7 +404,7 @@ nav
       font-size: 14px
       transition: transform .25s
       +bp(800px)
-        font-size: 13px
+        font-size: 12px
 
     i
       color: $Green
@@ -603,8 +605,11 @@ nav
       &:hover
         background: $PepDark + 30
 
-    &__btnAll
+    &__btn-box
       display: flex
+      .all__btn
+        margin: auto
+        color: #f1f1f1
 
 ////////////////////////////////////////////
   ////////////    REVIEW   //////////////
@@ -627,14 +632,7 @@ nav
 
   &__item
     flex-basis: 18%
-    min-height: 275px
-    border: 2px solid $PepLight
-    border-bottom: 4px solid $Green
-    transition: .25s linear
-    &:hover
-      border: 2px solid $PepDark
-      border-bottom: 4px solid $Green
-      transform: scale(1.05)
+    min-height: 265px
     +bp(800px)
       flex-basis: 28%
       min-height: 225px
@@ -643,18 +641,14 @@ nav
       flex-basis: 40%
       min-height: 200px
 
-
-
-  &__item:nth-child(1)
-    background: url(../img/reviews/review-1.jpg) center/cover no-repeat
-  &__item:nth-child(2)
-    background: url(../img/reviews/review-2.jpg) center/cover no-repeat
-  &__item:nth-child(3)
-    background: url(../img/reviews/review-3.jpg) center/cover no-repeat
-  &__item:nth-child(4)
-    background: url(../img/reviews/review-4.jpg) center/cover no-repeat
-  &__item:nth-child(5)
-    background: url(../img/reviews/review-5.jpg) center/cover no-repeat
+    img
+      max-width: 100%
+      border: 2px solid $PepLight
+      border-bottom: 4px solid $Green
+      transition: .25s linear
+      &:hover
+        border: 2px solid #70ff5dc5
+        border-bottom: 4px solid $Green
 
 .btnAllReview
   display: flex
@@ -680,9 +674,13 @@ nav
 
 .avtoParkWP
   display: flex
-  img
+  .avtopark-img
     padding: 40px 0
     margin: auto
+    width: 65%
+    +bp(800px)
+      width: 85%
+      padding: 20px 0
 
 .btnAutopark
   display: block

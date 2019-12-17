@@ -166,6 +166,12 @@ body {
   }
 }
 
+@media (max-width: 450px) {
+  .cont {
+    padding: 0 5px;
+  }
+}
+
 a {
   text-decoration: none;
   color: #353546;
@@ -707,8 +713,8 @@ nav {
 
 @media (max-width: 800px) {
   .service .serviceWP__item {
-    width: 139px;
-    height: 139px;
+    width: 120px;
+    height: 120px;
     margin: 5px 0;
   }
 }
@@ -756,7 +762,7 @@ nav {
 
 @media (max-width: 800px) {
   .service .serviceWP__title {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -1090,10 +1096,15 @@ nav {
   background: #535364;
 }
 
-.catalog .catalogWP__btnAll {
+.catalog .catalogWP__btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.catalog .catalogWP__btn-box .all__btn {
+  margin: auto;
+  color: #f1f1f1;
 }
 
 .reviews {
@@ -1133,18 +1144,7 @@ nav {
 .reviewWP__item {
   -ms-flex-preferred-size: 18%;
       flex-basis: 18%;
-  min-height: 275px;
-  border: 2px solid #909090;
-  border-bottom: 4px solid #49af00;
-  -webkit-transition: .25s linear;
-  transition: .25s linear;
-}
-
-.reviewWP__item:hover {
-  border: 2px solid #353546;
-  border-bottom: 4px solid #49af00;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  min-height: 265px;
 }
 
 @media (max-width: 800px) {
@@ -1164,24 +1164,17 @@ nav {
   }
 }
 
-.reviewWP__item:nth-child(1) {
-  background: url(../img/reviews/review-1.jpg) center/cover no-repeat;
+.reviewWP__item img {
+  max-width: 100%;
+  border: 2px solid #909090;
+  border-bottom: 4px solid #49af00;
+  -webkit-transition: .25s linear;
+  transition: .25s linear;
 }
 
-.reviewWP__item:nth-child(2) {
-  background: url(../img/reviews/review-2.jpg) center/cover no-repeat;
-}
-
-.reviewWP__item:nth-child(3) {
-  background: url(../img/reviews/review-3.jpg) center/cover no-repeat;
-}
-
-.reviewWP__item:nth-child(4) {
-  background: url(../img/reviews/review-4.jpg) center/cover no-repeat;
-}
-
-.reviewWP__item:nth-child(5) {
-  background: url(../img/reviews/review-5.jpg) center/cover no-repeat;
+.reviewWP__item img:hover {
+  border: 2px solid #70ff5dc5;
+  border-bottom: 4px solid #49af00;
 }
 
 .btnAllReview {
@@ -1219,9 +1212,17 @@ nav {
   display: flex;
 }
 
-.avtoParkWP img {
+.avtoParkWP .avtopark-img {
   padding: 40px 0;
   margin: auto;
+  width: 65%;
+}
+
+@media (max-width: 800px) {
+  .avtoParkWP .avtopark-img {
+    width: 85%;
+    padding: 20px 0;
+  }
 }
 
 .btnAutopark {

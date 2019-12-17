@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="lightbox/js/lightbox.js"></script>
+
+  <link href="lightbox/css/lightbox.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <title>Project ASIN</title>
@@ -257,8 +260,8 @@
           </div>
         </div>
       </div>
-      <div class="catalogWP__btnAll">
-        <a href="#" class="btn">Перейти в каталог</a>
+      <div class="catalogWP__btn-box">
+        <a href="#" class="all__btn btn">Перейти в каталог</a>
       </div>
     </div>
   </div>
@@ -268,11 +271,21 @@
         Отзывы клиентов
       </div>
       <div class="reviewWP">
-        <a href="#" class="reviewWP__item"></a>
-        <a href="#" class="reviewWP__item"></a>
-        <a href="#" class="reviewWP__item"></a>
-        <a href="#" class="reviewWP__item"></a>
-        <a href="#" class="reviewWP__item"></a>
+        <a href="img/reviews/review-1.jpg" data-lightbox="image-1" class="reviewWP__item">
+          <img class="reviews-img" src="img/reviews/review-1.jpg">
+        </a>
+        <a href="img/reviews/review-2.jpg" data-lightbox="image-1" class="reviewWP__item">
+          <img class="reviews-img" src="img/reviews/review-2.jpg">
+        </a>
+        <a href="img/reviews/review-3.jpg" data-lightbox="image-1" class="reviewWP__item">
+          <img class="reviews-img" src="img/reviews/review-3.jpg">
+        </a>
+        <a href="img/reviews/review-4.jpg" data-lightbox="image-1" class="reviewWP__item">
+          <img class="reviews-img" src="img/reviews/review-4.jpg">
+        </a>
+        <a href="img/reviews/review-5.jpg" data-lightbox="image-1" class="reviewWP__item">
+          <img class="reviews-img" src="img/reviews/review-5.jpg">
+        </a>
       </div>
       <div href="#" class="btnAllReview"><a href="#" class="btn">Все отзывы</a></div>
     </div>
@@ -281,7 +294,7 @@
     <div class="cont">
       <div class="avtoPark__title title">Наш автопарк</div>
       <div class="avtoParkWP">
-        <img src="img/autopark.png" alt="" width="65%">
+        <img class="avtopark-img" src="img/autopark.png" alt="">
       </div>
       <div href="#" class="btnAutopark"><a href="#" class="btn">Посмотреть весь автопарк</a></div>
     </div>
@@ -323,7 +336,32 @@
       dots: false,
       arrows: false,
       autoplay: true,
-      cssEase: 'ease'
+      cssEase: 'ease',
+      responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 510,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
     });
     // меню
     $('.nav__open').click(function () {
