@@ -1436,6 +1436,7 @@ nav {
   display: flex;
   padding: 20px 0;
   border-bottom: 1px solid #9D9CA6;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -1461,6 +1462,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
