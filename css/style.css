@@ -1380,7 +1380,7 @@ nav {
 
 .all-news .list-news__item {
   display: block;
-  border-bottom: 1px solid #353546;
+  border-bottom: 1px solid #9D9CA6;
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
@@ -1448,8 +1448,8 @@ nav {
 }
 
 .all-news .anons-news .anons-news-item__logo {
-  width: 250px;
-  height: 145px;
+  width: 250px !important;
+  height: 145px !important;
 }
 
 .all-news .anons-news .anons-news-item__anons {
@@ -1471,7 +1471,7 @@ nav {
 
 .all-news .anons-news .anons-news-item__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   padding-bottom: 10px;
   -webkit-transition: .2s ease-in-out;
