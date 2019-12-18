@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto&display=swap')
 @import "animation", "mixins"
 
 
@@ -24,6 +24,7 @@ body
   transition: .25s linear
 
 .cont
+  position: relative
   max-width: 1400px
   height: 100%
   margin: 0 auto
@@ -233,6 +234,17 @@ nav
     &:hover
       background: $PepDark
 
+.lic
+  z-index: 1
+  width: 95%
+  text-align: center
+  margin: 0 auto
+  font-size: 16px
+  color: #333333
+  animation: animationLic 1s infinite linear alternate-reverse
+  +bp(600px)
+    font-size: 14px
+
 ////////////////////////////////////////////
   ////////////    Slider     ////////////
 ////////////////////////////////////////////
@@ -242,19 +254,6 @@ nav
   display: flex
   position: relative
   width: 100%
-  
-  .lic
-    z-index: 1
-    position: absolute
-    width: 100%
-    text-align: center
-    margin: auto
-    font-size: 18px
-    top: 10px
-    color: #ddd
-    animation: animationLic 1s infinite linear alternate-reverse
-    +bp(600px)
-      font-size: 14px
 
   h2
     padding: 0 20px
@@ -454,18 +453,29 @@ nav
       margin-left: 0
 
     &__title
+      display: flex
+      justify-content: center
+      flex-direction: column
       position: relative
       color: #363636
       font-size: 18px
       font-weight: bold
       padding: 15px 0
-
+      white-space: nowrap
+      &::after
+        content: ""
+        position: absolute
+        width: 150px
+        height: 2px
+        bottom: 0
+        align-self: center
+        background: $Green
 
     &__text
-      margin-bottom: 20px
+      margin-top: auto
       font-size: 14px
       color: #444444
-      padding: 5px 25px
+      padding: 5px 15px
       
 
 
@@ -737,3 +747,106 @@ nav
     font-family: 'Montserrat', sans-serif
     .logo
       color: #f1f1f1
+
+////////////////////////////////////////////
+  ////////////    NEWS    ////////////
+////////////////////////////////////////////
+.all-news-block
+  .cont
+    +bp(1200px)
+      padding: 0 10px
+
+.all-news
+  display: flex
+  
+  .list-news
+    list-style: none
+    flex-basis: 25%
+    padding: 20px
+    margin: 0
+    +bp(1200px)
+      flex-basis: 35%
+    +bp(650px)
+      display: none
+
+    &__title
+      font-family: "Montserrat", sans-serif
+      font-size: 18px
+      font-weight: 700
+      color: #6d6d6d
+
+    &__item
+      display: block
+      border-bottom: 1px solid $PepDark
+      transition: .2s linear
+      >a
+        padding: 12px 5px
+        display: block
+        transition: .25s ease-in-out
+
+    &__item:hover
+      background: $PepDark
+      a
+        transform: translateX(10px)
+        color: #f1f1f1
+
+  .anons-news
+    padding: 20px
+    flex-basis: 70%
+    +bp(1200px)
+      flex-basis: 60%
+    +bp(650px)
+      flex-basis: 100%
+
+    &__title
+      font-family: "Montserrat", sans-serif
+      font-size: 18px
+      font-weight: 700
+      color: #6d6d6d
+      margin-bottom: 0
+
+    .anons-news-item
+      display: flex
+      padding: 20px 0
+      border-bottom: 1px solid #9D9CA6
+      +bp(1200px)
+        flex-direction: column
+
+      &__logo
+        width: 250px
+        height: 145px
+
+      &__anons
+        padding-left: 20px
+        display: flex
+        flex-direction: column
+        +bp(1200px)
+          padding: 0
+
+      &__title
+        font-family: "Montserrat", sans-serif
+        font-size: 22px
+        font-weight: bold
+        padding-bottom: 10px
+        transition: .2s ease-in-out
+
+      &__prew
+        font-size: 14px
+
+      &__dop
+        display: flex
+        justify-content: space-between
+        margin-top: auto
+        padding-top: 10px
+
+      &__date
+        color: #67666d
+
+      &__go-full
+        color: $PepDark
+        font-weight: 700
+        transition: .25s linear
+        border-bottom: 1px solid transparent
+        &:hover
+          color: $PepDark + 50
+          border-bottom: 1px solid $PepDark
