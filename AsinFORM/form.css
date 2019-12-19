@@ -1,0 +1,84 @@
+.form-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: auto;
+  background: #00000088;
+}
+
+.form {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #353546;
+  padding: 20px 30px;
+  border-radius: 2px;
+}
+
+.form__name, .form__tel, .form__message {
+  margin-bottom: 15px;
+  padding: 10px 17.5px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 2px solid #626262;
+  -webkit-transition: .25s linear;
+  transition: .25s linear;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline-color: #16ff5e;
+  -webkit-box-shadow: 0 0 5px #6cff84, inset 0 0 5px #6cff84;
+          box-shadow: 0 0 5px #6cff84, inset 0 0 5px #6cff84;
+}
+
+.form__message {
+  resize: none;
+}
+
+.form label {
+  color: #f1f1f1;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.form__sbmt {
+  margin: 10px auto;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 3px;
+  background: #545454;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #a9a9a9;
+  -webkit-transition: .25s linear;
+  transition: .25s linear;
+}
+
+.form__sbmt:hover, .form__sbmt:focus {
+  border: 2px solid #6cff84;
+  color: #6cff84;
+  -webkit-box-shadow: 0 0 5px #6cff84, inset 0 0 5px #6cff84;
+          box-shadow: 0 0 5px #6cff84, inset 0 0 5px #6cff84;
+  background: #353546;
+}
+/*# sourceMappingURL=form.css.map */

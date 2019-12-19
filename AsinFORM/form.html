@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="form.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="mask/jquery.maskedinput.min.js"></script>
+  <title>ASsinPRO</title>
+</head>
+<body>
+  <div class="form-box">
+    <form class="form" action="" method="post">
+      <label for="form__name">Ваше имя</label>
+      <input type="text" name="form__name" id="form__name" class="form__name">
+      <label for="form__name">Телефон</label>
+      <input type="tel" name="form__tel" id="form__tel" class="form__tel">
+      <label for="form__name">Чем мы можем вам помочь?</label>
+      <textarea name="form__message" id="form__message" class="form__message" cols="20" rows="4" fixed></textarea>
+      <input class="form__sbmt" name="form__sbmt" type="submit" value="Отправить">
+    </form>
+  </div>
+
+<script>
+$(function(){
+  $("#form__tel").mask("+7 (999) 999-9999");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+.form-box
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  align-content: center 
+  justify-content: center 
+  overflow: auto   
+  background: #00000088
+  
+.form
+  position: fixed
+  display: flex
+  flex-direction: column
+  background: #353546
+  padding: 20px 30px
+  border-radius: 2px
+
+  &__name,
+  &__tel,
+  &__message
+    margin-bottom: 15px
+    padding: 10px 17.5px
+    font-size: 16px
+    border-radius: 2px
+    border: 2px solid #626262
+    transition: .25s linear
+  
+  input:focus,
+  textarea:focus
+    outline-color: #16ff5e
+    box-shadow: 0 0 5px #6cff84, inset 0 0 5px #6cff84
+
+  &__message
+    resize: none
+
+  label
+    color: #f1f1f1
+    margin: 5px 0
+    padding: 0
+
+  &__sbmt
+    margin: 10px auto
+    padding: 15px 25px
+    font-size: 16px
+    border-radius: 3px
+    background: #545454
+    color: #fff
+    font-weight: bold 
+    cursor: pointer
+    border: 2px solid #a9a9a9
+    transition: .25s linear
+    &:hover,
+    &:focus
+      border: 2px solid #6cff84
+      color: #6cff84
+      box-shadow: 0 0 5px #6cff84, inset 0 0 5px #6cff84
+      background: #353546
